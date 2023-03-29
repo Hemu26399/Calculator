@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="title">Calculator</div>
+    <table clsss="border">
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td><input type="button" value="c" onclick="clear()"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="1" conclick="display('1')"></td>
+            <td><input type="button" value="2" conclick="display('2')"></td>
+            <td><input type="button" value="3" conclick="display('3')"></td>
+            <td><input type="button" value="/" conclick="display('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" conclick="display('4')"></td>
+            <td><input type="button" value="5" conclick="display('5')"></td>
+            <td><input type="button" value="6" conclick="display('6')"></td>
+            <td><input type="button" value="+" conclick="display('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" conclick="display('7')"></td>
+            <td><input type="button" value="8" conclick="display('8')"></td>
+            <td><input type="button" value="9" conclick="display('9')"></td>
+            <td><input type="button" value="-" conclick="display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="." conclick="display('.')"></td>
+            <td><input type="button" value="0" conclick="display('0')"></td>
+            <td><input type="button" value="=" conclick="equate('=')"></td>
+            <td><input type="button" value="*" conclick="display('*')"></td>
+        </tr>
+
+    </table>
+    <script type="text/javascript">
+        function clear() {
+            document.getElementById("result").value = "";
+
+        }
+        function display(val) {
+            document.getElementById("result").value += val;
+        }
+
+        function equate() {
+            let x = document.getElementById("result").value;
+            let y = eval(x);
+            document.getElementById("result").value = y;
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
